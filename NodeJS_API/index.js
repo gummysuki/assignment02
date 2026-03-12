@@ -3,6 +3,13 @@ const app = express();
 
 const PORT = 3000;
 
+app.use(express.json());  
+
+let menuItems = ["Burger", "Pizza", "Sushi"];
+let orders = [
+    { id: 1, item: "Burger" },
+    { id: 2, item: "Pizza" }
+];
 app.get('/', (req, res) => {
     res.send("FoodExpress API is running");
 });
